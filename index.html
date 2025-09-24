@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puberty Function Invitation</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Particle effect */
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.7);
+      animation: float 10s linear infinite;
+    }
+
+    @keyframes float {
+      0% {transform: translateY(0) scale(0.5);}
+      50% {transform: translateY(-600px) scale(1);}
+      100% {transform: translateY(0) scale(0.5);}
+    }
+
+    /* Card styling */
+    .card {
+      background: #fff;
+      border-radius: 30px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      width: 400px;
+      text-align: center;
+      padding: 40px 25px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      animation: bounceIn 1.2s ease;
+    }
+
+    /* Decorative shapes */
+    .card::before, .card::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .card::before {
+      width: 180px;
+      height: 180px;
+      background: #ff9a9e;
+      top: -60px;
+      left: -60px;
+      opacity: 0.7;
+    }
+    .card::after {
+      width: 120px;
+      height: 120px;
+      background: #a18cd1;
+      bottom: -40px;
+      right: -40px;
+      opacity: 0.7;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 40px;
+      color: #ff5e62;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+      animation: fadeSlide 1s ease;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+      animation: fadeSlide 1s ease 0.2s;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 10px;
+      z-index: 1;
+      position: relative;
+      animation: fadeSlide 1s ease 0.4s;
+    }
+
+    .date-time {
+      background: linear-gradient(90deg,#fbc2eb,#a6c1ee);
+      padding: 12px;
+      border-radius: 20px;
+      margin: 12px 0;
+      color: #fff;
+      font-weight: 600;
+      z-index: 1;
+      position: relative;
+      animation: fadeSlide 1s ease 0.6s;
+    }
+
+    iframe {
+      border-radius: 15px;
+      width: 100%;
+      height: 220px;
+      border: none;
+      margin-top: 20px;
+      z-index: 1;
+      position: relative;
+      animation: fadeSlide 1s ease 0.8s;
+    }
+
+    .footer {
+      font-size: 14px;
+      color: #888;
+      margin-top: 18px;
+      z-index: 1;
+      position: relative;
+      animation: fadeSlide 1s ease 1s;
+    }
+
+    @keyframes bounceIn {
+      0% {transform: scale(0.5); opacity:0;}
+      60% {transform: scale(1.05); opacity:1;}
+      80% {transform: scale(0.95);}
+      100% {transform: scale(1);}
+    }
+
+    @keyframes fadeSlide {
+      0% {opacity:0; transform: translateY(20px);}
+      100% {opacity:1; transform: translateY(0);}
+    }
+
+    /* Hover effect */
+    .card:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.4);
+    }
+
+    /* Button */
+    .share-btn {
+      background: linear-gradient(90deg,#fbc2eb,#a6c1ee);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 15px;
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .share-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Particle backgrounds -->
+  <script>
+    const particleCount = 30;
+    for(let i=0;i<particleCount;i++){
+      const div = document.createElement('div');
+      div.classList.add('particle');
+      div.style.width = `${Math.random()*10+5}px`;
+      div.style.height = div.style.width;
+      div.style.left = `${Math.random()*100}vw`;
+      div.style.top = `${Math.random()*100}vh`;
+      div.style.animationDuration = `${5+Math.random()*10}s`;
+      div.style.background = `rgba(255,255,255,${Math.random()*0.8 +0.2})`;
+      document.body.appendChild(div);
+    }
+  </script>
+
+  <div class="card">
+    <h1>🎉 Puberty Function 🎉</h1>
+    <h2>Sri Malini</h2>
+
+    <p>📅 Date: 28 September 2025</p>
+    <div class="date-time">🕒 Time: 3:00 PM to 10:00 PM</div>
+
+    <p><b>Location:</b></p>
+    <!-- Google Maps Embed -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.291079728675!2d80.24858371533118!3d12.918838349327103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d980644a625%3A0x2c46952ca5da0727!2sRoz%20Mahal!5e0!3m2!1sen!2sin!4v1706100000001!5m2!1sen!2sin" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+
+    <div class="footer">Can't wait to celebrate with you! 🥳</div>
+
+    <button class="share-btn" onclick="shareCard()">Share this Invitation</button>
+  </div>
+
+  <script>
+    function shareCard(){
+      if(navigator.share){
+        navigator.share({
+          title: 'Puberty Function Invitation',
+          text: 'Join us for Sri Malini\'s Puberty Function on 28 September 2025, 3-10 PM!',
+          url: window.location.href
+        })
+        .then(()=>console.log('Shared successfully'))
+        .catch(()=>alert('Sharing not supported on this browser'));
+      } else {
+        alert('Sharing not supported on this browser. Copy the link: ' + window.location.href);
+      }
+    }
+  </script>
+
+</body>
+</html>
