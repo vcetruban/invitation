@@ -3,229 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Puberty Function Invitation</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  <title>Wedding Invitation</title>
   <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #f6d365, #fda085);
-      overflow: hidden;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Particle effect */
-    .particle {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.7);
-      animation: float 10s linear infinite;
-    }
-
-    @keyframes float {
-      0% {transform: translateY(0) scale(0.5);}
-      50% {transform: translateY(-600px) scale(1);}
-      100% {transform: translateY(0) scale(0.5);}
-    }
-
-    /* Card styling */
-    .card {
-      background: #fff;
-      border-radius: 30px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-      width: 400px;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      color: #333;
       text-align: center;
-      padding: 40px 25px;
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-      animation: bounceIn 1.2s ease;
+      overflow-x: hidden;
     }
 
-    /* Decorative shapes */
-    .card::before, .card::after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      z-index: 0;
-    }
-    .card::before {
-      width: 180px;
-      height: 180px;
-      background: #ff9a9e;
-      top: -60px;
-      left: -60px;
-      opacity: 0.7;
-    }
-    .card::after {
-      width: 120px;
-      height: 120px;
-      background: #a18cd1;
-      bottom: -40px;
-      right: -40px;
-      opacity: 0.7;
+    .card {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1.2s ease-in-out;
     }
 
     h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 40px;
-      color: #ff5e62;
+      font-size: 2.5rem;
+      color: #d63384;
       margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
-      animation: fadeSlide 1s ease;
     }
 
-    h2 {
-      font-size: 24px;
-      color: #333;
-      margin-bottom: 15px;
-      position: relative;
-      z-index: 1;
-      animation: fadeSlide 1s ease 0.2s;
+    .glow {
+      font-size: 2.8rem;
+      font-weight: bold;
+      color: #ff4081;
+      text-shadow: 0 0 10px #ff80ab, 0 0 20px #ff4081, 0 0 30px #f50057;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff80ab, 0 0 20px #ff4081;
+      }
+      to {
+        text-shadow: 0 0 20px #f50057, 0 0 40px #ff80ab;
+      }
     }
 
     p {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 10px;
-      z-index: 1;
-      position: relative;
-      animation: fadeSlide 1s ease 0.4s;
+      font-size: 1.2rem;
+      margin: 10px 0;
     }
 
-    .date-time {
-      background: linear-gradient(90deg,#fbc2eb,#a6c1ee);
-      padding: 12px;
-      border-radius: 20px;
-      margin: 12px 0;
-      color: #fff;
-      font-weight: 600;
-      z-index: 1;
-      position: relative;
-      animation: fadeSlide 1s ease 0.6s;
+    .image-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 15px;
+      margin: 15px auto;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
 
     iframe {
       border-radius: 15px;
-      width: 100%;
-      height: 220px;
-      border: none;
       margin-top: 20px;
-      z-index: 1;
-      position: relative;
-      animation: fadeSlide 1s ease 0.8s;
+      width: 100%;
+      height: 300px;
+      border: 0;
     }
 
-    .footer {
-      font-size: 14px;
-      color: #888;
-      margin-top: 18px;
-      z-index: 1;
-      position: relative;
-      animation: fadeSlide 1s ease 1s;
-    }
-
-    @keyframes bounceIn {
-      0% {transform: scale(0.5); opacity:0;}
-      60% {transform: scale(1.05); opacity:1;}
-      80% {transform: scale(0.95);}
-      100% {transform: scale(1);}
-    }
-
-    @keyframes fadeSlide {
-      0% {opacity:0; transform: translateY(20px);}
-      100% {opacity:1; transform: translateY(0);}
-    }
-
-    /* Hover effect */
-    .card:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 30px 70px rgba(0,0,0,0.4);
-    }
-
-    /* Button */
-    .share-btn {
-      background: linear-gradient(90deg,#fbc2eb,#a6c1ee);
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 15px;
+    .button {
+      display: inline-block;
+      margin: 15px 10px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      color: white;
+      background: #d63384;
       border: none;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .share-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(214, 51, 132, 0.4);
+      transition: transform 0.2s, background 0.3s;
     }
 
+    .button:hover {
+      background: #ad1457;
+      transform: scale(1.05);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .glow {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      iframe {
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      .glow {
+        font-size: 1.8rem;
+      }
+      .card {
+        padding: 15px;
+      }
+      .button {
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
   </style>
 </head>
 <body>
 
-  <!-- Particle backgrounds -->
-  <script>
-    const particleCount = 30;
-    for(let i=0;i<particleCount;i++){
-      const div = document.createElement('div');
-      div.classList.add('particle');
-      div.style.width = `${Math.random()*10+5}px`;
-      div.style.height = div.style.width;
-      div.style.left = `${Math.random()*100}vw`;
-      div.style.top = `${Math.random()*100}vh`;
-      div.style.animationDuration = `${5+Math.random()*10}s`;
-      div.style.background = `rgba(255,255,255,${Math.random()*0.8 +0.2})`;
-      document.body.appendChild(div);
-    }
-  </script>
-
   <div class="card">
-    <h1>🎉 Puberty Function 🎉</h1>
-    <h2>Sri Malini</h2>
+    <h1>Wedding Invitation</h1>
+    <p>You are warmly invited to celebrate the wedding of</p>
+    <p class="glow">Sri Malini</p>
 
-    <p>📅 Date: 28 September 2025</p>
-    <div class="date-time">🕒 Time: 3:00 PM to 10:00 PM</div>
+   
 
-    <p><b>Location:</b></p>
-    <!-- Google Maps Embed -->
+    <p><strong>Date:</strong> September 28, 2025</p>
+    <p><strong>Venue:</strong> Gupta AC Function Hall</p>
+
     <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.291079728675!2d80.24858371533118!3d12.918838349327103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d980644a625%3A0x2c46952ca5da0727!2sRoz%20Mahal!5e0!3m2!1sen!2sin!4v1706100000001!5m2!1sen!2sin" 
-      allowfullscreen="" 
-      loading="lazy">
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7262128659!2d80.2063289!3d13.108315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA2JzI5LjkiTiA4MMKwMTInMjMuMiJF!5e0!3m2!1sen!2sin!4v1695653456789"
+      allowfullscreen="" loading="lazy">
     </iframe>
 
-    <div class="footer">Can't wait to celebrate with you! 🥳</div>
+    <a href="https://www.google.com/maps/place//@13.108315,80.2063289,54m/data=!3m1!1e3!4m6!1m5!3m4!2zMTPCsDA2JzI5LjkiTiA4MMKwMTInMjMuMiJF!8m2!3d13.1083056!4d80.2064444?entry=ttu" 
+       class="button" target="_blank">📍 Open in Maps</a>
 
-    <button class="share-btn" onclick="shareCard()">Share this Invitation</button>
+    <button class="button" onclick="shareInvite()">📤 Share Invitation</button>
   </div>
 
+  <!-- Confetti effect -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script>
-    function shareCard(){
-      if(navigator.share){
+    function launchConfetti() {
+      confetti({
+        particleCount: 200,
+        spread: 120,
+        origin: { y: 0.6 }
+      });
+    }
+    window.onload = launchConfetti;
+
+    function shareInvite() {
+      if (navigator.share) {
         navigator.share({
-          title: 'Puberty Function Invitation',
-          text: 'Join us for Sri Malini\'s Puberty Function on 28 September 2025, 3-10 PM!',
+          title: "Wedding Invitation",
+          text: "Join us in celebrating Sri Malini’s Wedding 💍",
           url: window.location.href
-        })
-        .then(()=>console.log('Shared successfully'))
-        .catch(()=>alert('Sharing not supported on this browser'));
+        }).catch(console.error);
       } else {
-        alert('Sharing not supported on this browser. Copy the link: ' + window.location.href);
+        alert("Share this link with friends: " + window.location.href);
       }
     }
   </script>
